@@ -2,21 +2,33 @@
 <html lang="pt_BR">
   <head>
     <meta charset="utf-8">
-    <title>My HTML File</title>
-    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <title>EAD Facom</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-cyan.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
   </head>
-  <body ng-app="GabTV">
+  <body ng-app="EADFacom" ng-controller="IndexController">
 
-    
-<p><a href="/">Main</a></p>
-
-<a href="#!/entrar">Entrar</a></br>
-</br>
-
-<a href="#!/sandro">Teste</a>
-
-      <div id="app" ng-view></div>
-
+  <!-- Always shows a header, even in smaller screens. -->
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+  <header class="mdl-layout__header">
+    <div class="mdl-layout__header-row">
+      <!-- Title -->
+      <span class="mdl-layout-title">{{app_name}}</span>
+    </div>
+  </header>
+  <div class="mdl-layout__drawer">
+    <span class="mdl-layout-title">{{app_name}}</span>
+    <nav class="mdl-navigation">
+      <a class="mdl-navigation__link" href="#!/">Início</a>
+      <a class="mdl-navigation__link" href="#!/cursos">Cursos</a>
+      <a class="mdl-navigation__link" href="#!/tarefas">Tarefas</a>
+    </nav>
+  </div>
+  <main class="mdl-layout__content" id="app" ng-view>
+  </main>
+</div>
 
     <script src="bower_components/angular/angular.min.js"></script>
     <script src="bower_components/angular-route/angular-route.min.js"></script>
