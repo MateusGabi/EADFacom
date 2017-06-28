@@ -1,0 +1,15 @@
+{
+  "name": "EAD Facom",
+  "authors": [
+    "Mateus Gabi <mateusgabimoreira@hotmail.com>",
+    "Pedro Henrique <pedro_hmoraes@hotmail.com>"
+  ],
+  "description": "Trabalho da disciplina Interação Humano-Computador na FACOM/UFMS.",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "dependencies": {
+    "material-design-lite": "^1.3.0"
+  }
+}
