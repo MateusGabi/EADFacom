@@ -11,6 +11,9 @@ app.config(function($routeProvider) {
     .when("/erro", {
         templateUrl : "views/erro.html"
     })
+    .when("/sandro", {
+        templateUrl : "views/sandro.html"
+    })
     
     // caso não seja nenhum desses, redirecione para a rota '/'
    .otherwise ({ redirectTo: '/erro' });
