@@ -2,8 +2,8 @@ var app = angular.module("EADFacom", ["ngRoute"]);
 app.config(function($routeProvider) {
 
     $routeProvider
-    .when("/", {
-        templateUrl : "views/main.html"
+    .when("/inicio", {
+        templateUrl : "views/inicio.html"
     })
     .when("/entrar", {
         templateUrl : "views/loggin.html"
@@ -13,6 +13,9 @@ app.config(function($routeProvider) {
     })
     .when("/cursos", {
         templateUrl : "views/cursos.html"
+    })
+    .when("/cursos/adicionar", {
+        templateUrl: "views/cursos.adicionar.html"
     })
     
     // caso não seja nenhum desses, redirecione para a rota '/'
