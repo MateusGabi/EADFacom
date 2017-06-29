@@ -3,19 +3,19 @@ app.config(function($routeProvider) {
 
     $routeProvider
     .when("/inicio", {
-        templateUrl : "views/inicio.html"
-    })
-    .when("/entrar", {
-        templateUrl : "views/loggin.html"
+        templateUrl : "views/inicio.html",
+        controller: "IndexController"
     })
     .when("/erro", {
         templateUrl : "views/erro.html"
     })
     .when("/cursos", {
-        templateUrl : "views/cursos.html"
+        templateUrl : "views/cursos/cursos.meus.html",
+        controller: "CursosController"
     })
     .when("/cursos/adicionar", {
-        templateUrl: "views/cursos.adicionar.html"
+        templateUrl: "views/cursos/cursos.adicionar.html",
+        controller: "CursosController"
     })
     
     // caso não seja nenhum desses, redirecione para a rota '/'
@@ -25,5 +25,18 @@ app.config(function($routeProvider) {
 app.controller("IndexController", ['$scope', function ($scope) {
 
     $scope.app_name = "EAD Facom";
+
+}]);
+
+app.controller("CursosController", ['$scope', '$timeout', function ($scope, $timeout) {
+    
+    $scope.showPopUpSenha = function () {
+        
+        //
+        // TODO Método que mostra popup pedindo senha
+        //
+
+        $("#dialog").showModal();
+    };
 
 }]);
