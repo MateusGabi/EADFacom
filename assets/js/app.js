@@ -39,3 +39,7 @@ app.controller("IndexController", ['$scope', function ($scope) {
 app.controller("CursosController", ['$scope', function ($scope) {
 
 }]);
+
+app.controller("TarefasController", ['$scope', function ($scope) {
+
+}]);
