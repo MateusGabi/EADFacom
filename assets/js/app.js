@@ -28,15 +28,6 @@ app.controller("IndexController", ['$scope', function ($scope) {
 
 }]);
 
-app.controller("CursosController", ['$scope', '$timeout', function ($scope, $timeout) {
-    
-    $scope.showPopUpSenha = function () {
-        
-        //
-        // TODO Método que mostra popup pedindo senha
-        //
-
-        $("#dialog").showModal();
-    };
+app.controller("CursosController", ['$scope', function ($scope) {
 
 }]);

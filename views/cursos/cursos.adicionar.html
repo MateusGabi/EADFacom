@@ -59,20 +59,20 @@
     <span class="mdl-list__item-primary-content">
       <span>Probabilidade e Estatística</span>
     </span>
-    <a class="mdl-list__item-secondary-action dialog-button" ng-click="showPopUpSenha()" ><i class="material-icons">add</i></a>
+    <a class="mdl-list__item-secondary-action show-modal" ><i class="material-icons">add</i></a>
   </div>
   <div class="mdl-list__item">
     <span class="mdl-list__item-primary-content">
       <span>Arquitetura de Software</span>
     </span>
-    <a class="mdl-list__item-secondary-action dialog-button" ><i class="material-icons">add</i></a>
+    <a class="mdl-list__item-secondary-action show-modal" ><i class="material-icons">add</i></a>
   </div>
   <div class="mdl-list__item">
     <span class="mdl-list__item-primary-content">
       <span>Programação I</span>
     </span>
     <span class="mdl-list__item-secondary-content">
-      <a class="mdl-list__item-secondary-action dialog-button" ><i class="material-icons">add</i></a>
+      <a class="mdl-list__item-secondary-action show-modal" ><i class="material-icons">add</i></a>
   </span>
   </div>
   <div class="mdl-list__item">
@@ -80,35 +80,43 @@
       <span>Programação II</span>
     </span>
     <span class="mdl-list__item-secondary-content">
-      <a class="mdl-list__item-secondary-action dialog-button" ><i class="material-icons">add</i></a>
+      <a class="mdl-list__item-secondary-action show-modal" ><i class="material-icons">add</i></a>
   </span>
   </div>
   <div class="mdl-list__item">
     <span class="mdl-list__item-primary-content">
       <span>Engenharia de Software</span>
     </span>
-    <a class="mdl-list__item-secondary-action dialog-button" ><i class="material-icons">add</i></a>
+    <a class="mdl-list__item-secondary-action show-modal" ><i class="material-icons">add</i></a>
   </div>
   <div class="mdl-list__item">
     <span class="mdl-list__item-primary-content">
       <span>Banco de Dados I</span>
     </span>
     <span class="mdl-list__item-secondary-content">
-      <a class="mdl-list__item-secondary-action mdl-js-button dialog-button" ><i class="material-icons">add</i></a>
+      <a class="mdl-list__item-secondary-action mdl-js-button show-modal" ><i class="material-icons">add</i></a>
   </span>
   </div>
 </div>
 
-<dialog ng-hide="dialogIsHidden" id="dialog" class="mdl-dialog">
-  <h3 class="mdl-dialog__title">MDL Dialog</h3>
-  <div class="mdl-dialog__content">
-    <p>
-      This is an example of the Material Design Lite dialog component.
-      Please use responsibly.
-    </p>
-  </div>
-  <div class="mdl-dialog__actions">
-    <button type="button" class="mdl-button">Close</button>
-    <button type="button" class="mdl-button" disabled>Disabled action</button>
-  </div>
-</dialog>
+  <dialog class="mdl-dialog">
+    <div class="mdl-dialog__content">
+      <p>Senha</p>
+    </div>
+    <div class="mdl-dialog__actions mdl-dialog__actions--full-width">
+      <button type="button" class="mdl-button close">Enviar</button>
+    </div>
+  </dialog>
+  <script>
+    var dialog = document.querySelector('dialog');
+    var showModalButton = document.querySelector('.show-modal');
+    if (! dialog.showModal) {
+      dialogPolyfill.registerDialog(dialog);
+    }
+    showModalButton.addEventListener('click', function() {
+      dialog.showModal();
+    });
+    dialog.querySelector('.close').addEventListener('click', function() {
+      dialog.close();
+    });
+  </script>
