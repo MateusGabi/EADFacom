@@ -17,6 +17,14 @@ app.config(function($routeProvider) {
         templateUrl: "views/cursos/cursos.adicionar.html",
         controller: "CursosController"
     })
+    .when("/tarefas", {
+        templateUrl: "views/tarefas/tarefas.listagem.html",
+        controller: "TarefasController"
+    })
+    .when("/tarefas/submeter", {
+        templateUrl: "views/tarefas/tarefas.submeter.html",
+        controller: "TarefasController"
+    })
     
     // caso não seja nenhum desses, redirecione para a rota '/'
    .otherwise ({ redirectTo: '/erro' });
