@@ -17,6 +17,10 @@ app.config(function($routeProvider) {
         templateUrl: "views/cursos/cursos.adicionar.html",
         controller: "CursosController"
     })
+    .when("/cursos/material", {
+        templateUrl: "views/cursos/cursos.material.html",
+        controller: "CursosController"
+    })
     .when("/tarefas", {
         templateUrl: "views/tarefas/tarefas.listagem.html",
         controller: "TarefasController"
